@@ -1,0 +1,2037 @@
+Script started on 2024-07-24 16:50:09+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="195" LINES="15"]
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ code .
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ code .d testing/[5Pode .[Ksource .env
+script: unrecognized option '--interactive'
+Try 'script --help' for more information.
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ source .env
+script: unrecognized option '--private-key'
+Try 'script --help' for more information.
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ $DEPLOY
+Build, test, fuzz, debug and deploy Solidity contracts
+
+[1m[4mUsage:[0m [1mforge[0m <COMMAND>
+
+[1m[4mCommands:[0m
+  [1mbind[0m               Generate Rust bindings for smart contracts
+  [1mbind-json[0m          Generate bindings for serialization/deserialization of project structs via JSON cheatcodes
+  [1mbuild[0m              Build the project's smart contracts [aliases: b, compile]
+  [1mcache[0m              Manage the Foundry cache
+  [1mclean[0m              Remove the build artifacts and cache directories [aliases: cl]
+  [1mclone[0m              Clone a contract from Etherscan
+  [1mcompletions[0m        Generate shell completions script [aliases: com]
+  [1mconfig[0m             Display the current config [aliases: co]
+  [1mcoverage[0m           Generate coverage reports
+  [1mcreate[0m             Deploy a smart contract [aliases: c]
+  [1mdebug[0m              Debugs a single smart contract as a script [aliases: d]
+  [1mdoc[0m                Generate documentation for the project
+  [1meip712[0m             Generate EIP-712 struct encodings for structs from a given file
+  [1mflatten[0m            Flatten a source file and all of its imports into one file [aliases: f]
+  [1mfmt[0m                Format Solidity source files
+  [1mgeiger[0m             Detects usage of unsafe cheat codes in a project and its dependencies
+  [1mgenerate[0m           Generate scaffold files
+  [1mgenerate-fig-spec[0m  Generate Fig autocompletion spec [aliases: fig]
+  [1mhelp[0m               Print this message or the help of the given subcommand(s)
+  [1minit[0m               Create a new Forge project
+  [1minspect[0m            Get specialized information about a smart contract [aliases: in]
+  [1minstall[0m            Install one or multiple dependencies [aliases: i]
+  [1mremappings[0m         Get the automatically inferred remappings for the project [aliases: re]
+  [1mremove[0m             Remove one or multiple dependencies [aliases: rm]
+  [1mscript[0m             Run a smart contract as a script, building transactions that can be sent onchain
+  [1mselectors[0m          Function selector utilities [aliases: se]
+  [1msnapshot[0m           Create a snapshot of each test's gas usage [aliases: s]
+  [1msoldeer[0m            Soldeer dependency manager
+  [1mtest[0m               Run the project's tests [aliases: t]
+  [1mtree[0m               Display a tree visualization of the project's dependency graph [aliases: tr]
+  [1mupdate[0m             Update one or multiple dependencies [aliases: u]
+  [1mverify-bytecode[0m    Verify the deployed bytecode against its source [aliases: vb]
+  [1mverify-check[0m       Check verification status on Etherscan [aliases: vc]
+  [1mverify-contract[0m    Verify smart contracts on Etherscan [aliases: v]
+
+[1m[4mOptions:[0m
+  [1m-h[0m, [1m--help[0m     Print help
+  [1m-V[0m, [1m--version[0m  Print version
+
+Find more information in the book: http://book.getfoundry.sh/reference/forge/forge.html
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ fog[Krge script DeployFund[K[K[K[KVoting --rpc-url $ANVIL_RPC_URL --private-key[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kchmod +x my_script.sh
+chmod: cannot access 'my_script.sh': No such file or directory
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ ls
+[0m[01;34mbroadcast[0m  [01;34mcache[0m  DelpoyVoting  deploy.sh  foundry.toml  [01;34mlib[0m  nethereum-gen.settings  [01;34mout[0m  README.md  [01;34mscript[0m  [01;34msrc[0m  [01;34mtest[0m
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ lschmod +x my_script.sh[K[K[K[K[K[K[K[K[Kdeploy.sh
+chmod: cannot access 'my_deploy.sh': No such file or directory
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ chmod +x my_deploy.sh[1Pdeploy.sh[1Pdeploy.sh[1Pdeploy.sh
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ ./deploy.sh 
+Error: 
+[31merror sending request for url (http://127.0.0.1:8545/)[0m
+
+Context:
+- Error #0: error sending request for url (http://127.0.0.1:8545/)
+- Error #1: client error (Connect)
+- Error #2: tcp connect error: Connection refused (os error 111)
+- Error #3: Connection refused (os error 111)
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ [K]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ ./deploy.sh 
+3[2K[1m[[32m⠃[0m][0m Compiling...3[2K[1m[[32m⠊[0m][0m Compiling...3[2K[1m[[32m⠒[0m][0m Compiling...
+No files changed, compilation skipped
+[33mEIP-3855 is not supported in one or more of the RPCs used.
+Unsupported Chain IDs: 31337.
+Contracts deployed with a Solidity version equal or higher than 0.8.20 might not work properly.
+For more information, please see https://eips.ethereum.org/EIPS/eip-3855[0m
+[32mScript ran successfully.[0m
+
+== Return ==
+0: contract Voting 0x5FbDB2315678afecb367f032d93F642f64180aa3
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 2.000000001 gwei
+
+Estimated total gas used for script: 623643
+
+Estimated amount required: 0.001247286000623643 ETH
+
+==========================
+[32m⠂[0m Sequence #1 on anvil-hardhat                                                                                                                                                         [2K[32m⠂[0m Sequence #1 on anvil-hardhat
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)[1A[2K[1B[2K[1A[32m⠂[0m Sequence #1 on anvil-hardhat | Sending transactions [0 - 0]
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)[1A[2K[1B[2K[1A[32m⠂[0m Sequence #1 on anvil-hardhat | Sending transactions [0 - 0]
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m⠂[0m Sequence #1 on anvil-hardhat | Sending transactions [0 - 0]
+    [32m⠂[0m [33m[Pending][0m 0xc98d5a82a8658cd7decfff5576545e110e01693e932508580020eee9585089d3
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m⠂[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠂[0m [33m[Pending][0m 0xc98d5a82a8658cd7decfff5576545e110e01693e932508580020eee9585089d3
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m⠄[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠂[0m [33m[Pending][0m 0xc98d5a82a8658cd7decfff5576545e110e01693e932508580020eee9585089d3
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m⠄[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠄[0m [33m[Pending][0m 0xc98d5a82a8658cd7decfff5576545e110e01693e932508580020eee9585089d3
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m⡀[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠄[0m [33m[Pending][0m 0xc98d5a82a8658cd7decfff5576545e110e01693e932508580020eee9585089d3
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m⡀[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⡀[0m [33m[Pending][0m 0xc98d5a82a8658cd7decfff5576545e110e01693e932508580020eee9585089d3
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m⡀[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A
+##### anvil-hardhat
+✅  [Success]Hash: 0xc98d5a82a8658cd7decfff5576545e110e01693e932508580020eee9585089d3
+Contract Address: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+Block: 1
+Paid: 0.000479848000479848 ETH (479848 gas * 1.000000001 gwei)
+
+[32m⡀[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m⡀[0m Sequence #1 on anvil-hardhat | Total Paid: 0.000479848000479848 ETH (479848 gas * avg 1.000000001 gwei)
+
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m✅[0m Sequence #1 on anvil-hardhat | Total Paid: 0.000479848000479848 ETH (479848 gas * avg 1.000000001 gwei)
+
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m✅[0m Sequence #1 on anvil-hardhat | Total Paid: 0.000479848000479848 ETH (479848 gas * avg 1.000000001 gwei)
+
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m✅[0m Sequence #1 on anvil-hardhat | Total Paid: 0.000479848000479848 ETH (479848 gas * avg 1.000000001 gwei)
+                                                                                                                                                                                       
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: /home/egovridc/Desktop/contracts/testing/broadcast/DeployVoting.s.sol/31337/run-latest.json
+
+Sensitive values saved to: /home/egovridc/Desktop/contracts/testing/cache/DeployVoting.s.sol/31337/run-latest.json
+
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ ./deploy.sh 
+./deploy.sh: line 4: export: `=0x5FbDB2315678afecb367f032d93F642f64180aa3': not a valid identifier
+3[2K[1m[[32m⠃[0m][0m Compiling...3[2K[1m[[32m⠊[0m][0m Compiling...3[2K[1m[[32m⠒[0m][0m Compiling...
+No files changed, compilation skipped
+[33mEIP-3855 is not supported in one or more of the RPCs used.
+Unsupported Chain IDs: 31337.
+Contracts deployed with a Solidity version equal or higher than 0.8.20 might not work properly.
+For more information, please see https://eips.ethereum.org/EIPS/eip-3855[0m
+[32mScript ran successfully.[0m
+
+== Return ==
+0: contract Voting 0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 2.000000001 gwei
+
+Estimated total gas used for script: 623643
+
+Estimated amount required: 0.001247286000623643 ETH
+
+==========================
+[32m⠂[0m Sequence #1 on anvil-hardhat                                                                                                                                                         [2K[32m⠂[0m Sequence #1 on anvil-hardhat
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)[1A[2K[1B[2K[1A[32m⠂[0m Sequence #1 on anvil-hardhat
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m⠂[0m Sequence #1 on anvil-hardhat | Sending transactions [0 - 0]
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m⠂[0m Sequence #1 on anvil-hardhat | Sending transactions [0 - 0]
+    [32m⠂[0m [33m[Pending][0m 0x92a1479c552f714aba95c73355c8526629e3656403d1367524c5902f26f9894f
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m⠂[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠂[0m [33m[Pending][0m 0x92a1479c552f714aba95c73355c8526629e3656403d1367524c5902f26f9894f
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m⠂[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A
+##### anvil-hardhat
+✅  [Success]Hash: 0x92a1479c552f714aba95c73355c8526629e3656403d1367524c5902f26f9894f
+Contract Address: 0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
+Block: 2
+Paid: 0.00042178578499228 ETH (479848 gas * 0.878998735 gwei)
+
+[32m⠂[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m⠂[0m Sequence #1 on anvil-hardhat | Total Paid: 0.00042178578499228 ETH (479848 gas * avg 0.878998735 gwei)
+
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m✅[0m Sequence #1 on anvil-hardhat | Total Paid: 0.00042178578499228 ETH (479848 gas * avg 0.878998735 gwei)
+
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m✅[0m Sequence #1 on anvil-hardhat | Total Paid: 0.00042178578499228 ETH (479848 gas * avg 0.878998735 gwei)
+
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m✅[0m Sequence #1 on anvil-hardhat | Total Paid: 0.00042178578499228 ETH (479848 gas * avg 0.878998735 gwei)
+                                                                                                                                                                                       
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: /home/egovridc/Desktop/contracts/testing/broadcast/DeployVoting.s.sol/31337/run-latest.json
+
+Sensitive values saved to: /home/egovridc/Desktop/contracts/testing/cache/DeployVoting.s.sol/31337/run-latest.json
+
+Error: 
+[31mFailed to get resolver from the ENS registry: buffer overrun while deserializing[0m
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ cast send --unlocked --from $ANVIL_ADDRESS $VOTING "addCandidate(string)" "hud"
+Error: 
+[31mFailed to get resolver from the ENS registry: buffer overrun while deserializing[0m
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ cast send --unlocked --from $ANVIL_ADDRESS $VOTING "addCandidate(string)" "hud"
+Error: 
+[31mFailed to get resolver from the ENS registry: buffer overrun while deserializing[0m
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ cast send --unlocked --from $ANVIL_ADDRESS $VOTING "addCandidate(string)" "hud"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./deploy.sh [K
+./deploy.sh: line 4: export: `=0x5FbDB2315678afecb367f032d93F642f64180aa3': not a valid identifier
+3[2K[1m[[32m⠃[0m][0m Compiling...3[2K[1m[[32m⠊[0m][0m Compiling...3[2K[1m[[32m⠒[0m][0m Compiling...
+3[2K[1m[[32m⠢[0m][0m Compiling 2 files with Solc 0.8.193[2K[1m[[32m⠆[0m][0m Compiling 2 files with Solc 0.8.193[2K[1m[[32m⠰[0m][0m Compiling 2 files with Solc 0.8.193[2K[1m[[32m⠔[0m][0m Compiling 2 files with Solc 0.8.193[2K[1m[[32m⠒[0m][0m Compiling 2 files with Solc 0.8.193[2K[1m[[32m⠑[0m][0m Compiling 2 files with Solc 0.8.193[2K[1m[[32m⠘[0m][0m Compiling 2 files with Solc 0.8.193[2K[1m[[32m⠃[0m][0m Compiling 2 files with Solc 0.8.193[2K[1m[[32m⠊[0m][0m Compiling 2 files with Solc 0.8.193[2K[1m[[32m⠒[0m][0m Compiling 2 files with Solc 0.8.19
+3[2K[1m[[32m⠢[0m][0m Solc 0.8.19 finished in 903.39ms
+Compiler run [32msuccessful![0m
+[33mEIP-3855 is not supported in one or more of the RPCs used.
+Unsupported Chain IDs: 31337.
+Contracts deployed with a Solidity version equal or higher than 0.8.20 might not work properly.
+For more information, please see https://eips.ethereum.org/EIPS/eip-3855[0m
+[32mScript ran successfully.[0m
+
+== Return ==
+0: contract Voting 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 1.757997469 gwei
+
+Estimated total gas used for script: 608199
+
+Estimated amount required: 0.001069212302648331 ETH
+
+==========================
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)[2K[32m⠂[0m Sequence #1 on anvil-hardhat
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)[1A[2K[1B[2K[1A[32m⠂[0m Sequence #1 on anvil-hardhat | Sending transactions [0 - 0]
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)[1A[2K[1B[2K[1A[32m⠂[0m Sequence #1 on anvil-hardhat | Sending transactions [0 - 0]
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m⠂[0m Sequence #1 on anvil-hardhat | Sending transactions [0 - 0]
+    [32m⠂[0m [33m[Pending][0m 0x2d1188d14491143208434f5053fe645d7bdb5f26f5c66ca0ca3165f5ab4180fc
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m⠂[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠂[0m [33m[Pending][0m 0x2d1188d14491143208434f5053fe645d7bdb5f26f5c66ca0ca3165f5ab4180fc
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m⠂[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A
+##### anvil-hardhat
+✅  [Success]Hash: 0x2d1188d14491143208434f5053fe645d7bdb5f26f5c66ca0ca3165f5ab4180fc
+Contract Address: 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0
+Block: 3
+Paid: 0.0003615671317041 ETH (467964 gas * 0.772638775 gwei)
+
+[32m⠂[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m⠂[0m Sequence #1 on anvil-hardhat | Total Paid: 0.0003615671317041 ETH (467964 gas * avg 0.772638775 gwei)
+
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m✅[0m Sequence #1 on anvil-hardhat | Total Paid: 0.0003615671317041 ETH (467964 gas * avg 0.772638775 gwei)
+
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m✅[0m Sequence #1 on anvil-hardhat | Total Paid: 0.0003615671317041 ETH (467964 gas * avg 0.772638775 gwei)
+
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m✅[0m Sequence #1 on anvil-hardhat | Total Paid: 0.0003615671317041 ETH (467964 gas * avg 0.772638775 gwei)
+                                                                                                                                                                                       
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: /home/egovridc/Desktop/contracts/testing/broadcast/DeployVoting.s.sol/31337/run-latest.json
+
+Sensitive values saved to: /home/egovridc/Desktop/contracts/testing/cache/DeployVoting.s.sol/31337/run-latest.json
+
+Error: 
+[31mFailed to get resolver from the ENS registry: buffer overrun while deserializing[0m
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ ./deploy.sh 
+./deploy.sh: line 4: export: `=0x5FbDB2315678afecb367f032d93F642f64180aa3': not a valid identifier
+3[2K[1m[[32m⠃[0m][0m Compiling...3[2K[1m[[32m⠊[0m][0m Compiling...3[2K[1m[[32m⠒[0m][0m Compiling...
+No files changed, compilation skipped
+[33mEIP-3855 is not supported in one or more of the RPCs used.
+Unsupported Chain IDs: 31337.
+Contracts deployed with a Solidity version equal or higher than 0.8.20 might not work properly.
+For more information, please see https://eips.ethereum.org/EIPS/eip-3855[0m
+[32mScript ran successfully.[0m
+
+== Return ==
+0: contract Voting 0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 1.545277549 gwei
+
+Estimated total gas used for script: 608199
+
+Estimated amount required: 0.000939836260024251 ETH
+
+==========================
+[32m⠂[0m Sequence #1 on anvil-hardhat                                                                                                                                                         [2K[32m⠂[0m Sequence #1 on anvil-hardhat
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)[1A[2K[1B[2K[1A[32m⠂[0m Sequence #1 on anvil-hardhat
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m⠂[0m Sequence #1 on anvil-hardhat | Sending transactions [0 - 0]
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m⠂[0m Sequence #1 on anvil-hardhat | Sending transactions [0 - 0]
+    [32m⠂[0m [33m[Pending][0m 0x14a1317cb98df738bd00dbedf44ed6c8858076235094f11a848ec662cbd8d161
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m⠂[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠂[0m [33m[Pending][0m 0x14a1317cb98df738bd00dbedf44ed6c8858076235094f11a848ec662cbd8d161
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m⠂[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A
+##### anvil-hardhat
+✅  [Success]Hash: 0x14a1317cb98df738bd00dbedf44ed6c8858076235094f11a848ec662cbd8d161
+Contract Address: 0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9
+Block: 4
+Paid: 0.000317781243792432 ETH (467964 gas * 0.679071988 gwei)
+
+[32m⠂[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m⠂[0m Sequence #1 on anvil-hardhat | Total Paid: 0.000317781243792432 ETH (467964 gas * avg 0.679071988 gwei)
+
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m✅[0m Sequence #1 on anvil-hardhat | Total Paid: 0.000317781243792432 ETH (467964 gas * avg 0.679071988 gwei)
+
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m✅[0m Sequence #1 on anvil-hardhat | Total Paid: 0.000317781243792432 ETH (467964 gas * avg 0.679071988 gwei)
+
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m✅[0m Sequence #1 on anvil-hardhat | Total Paid: 0.000317781243792432 ETH (467964 gas * avg 0.679071988 gwei)
+                                                                                                                                                                                       
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: /home/egovridc/Desktop/contracts/testing/broadcast/DeployVoting.s.sol/31337/run-latest.json
+
+Sensitive values saved to: /home/egovridc/Desktop/contracts/testing/cache/DeployVoting.s.sol/31337/run-latest.json
+
+Error: 
+[31mFailed to get resolver from the ENS registry: buffer overrun while deserializing[0m
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ ./deploy.sh cast send --unlocked --from $ANVIL_ADDRESS $VOTING "addCandidate(string)" "hud"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./deploy.sh [Kcast send --unlocked --from $ANVIL_ADDRESS $VOTING "addCandidate(string)" "hud"
+Error: 
+[31mFailed to get resolver from the ENS registry: buffer overrun while deserializing[0m
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ cast send --unlocked --from $ANVIL_ADDRESS $VOTING "addCandidate(string)" "hud"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./deploy.sh [K
+./deploy.sh: line 4: export: `=0xcf7ed3acca5a467e9e704c703e8d87f634fb0fc9': not a valid identifier
+3[2K[1m[[32m⠃[0m][0m Compiling...3[2K[1m[[32m⠊[0m][0m Compiling...3[2K[1m[[32m⠒[0m][0m Compiling...
+No files changed, compilation skipped
+[33mEIP-3855 is not supported in one or more of the RPCs used.
+Unsupported Chain IDs: 31337.
+Contracts deployed with a Solidity version equal or higher than 0.8.20 might not work properly.
+For more information, please see https://eips.ethereum.org/EIPS/eip-3855[0m
+[32mScript ran successfully.[0m
+
+== Return ==
+0: contract Voting 0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 1.358143975 gwei
+
+Estimated total gas used for script: 608199
+
+Estimated amount required: 0.000826021807451025 ETH
+
+==========================
+[32m⠂[0m Sequence #1 on anvil-hardhat                                                                                                                                                         [2K[32m⠂[0m Sequence #1 on anvil-hardhat
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)[1A[2K[1B[2K[1A[32m⠂[0m Sequence #1 on anvil-hardhat
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m⠂[0m Sequence #1 on anvil-hardhat | Sending transactions [0 - 0]
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m⠂[0m Sequence #1 on anvil-hardhat | Sending transactions [0 - 0]
+    [32m⠂[0m [33m[Pending][0m 0xe475e2298e02dec3d3ccb58007f2026cac4c76ed20387f0e4df75a6af74c2ced
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m⠂[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠂[0m [33m[Pending][0m 0xe475e2298e02dec3d3ccb58007f2026cac4c76ed20387f0e4df75a6af74c2ced
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m⠂[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A
+##### anvil-hardhat
+✅  [Success]Hash: 0xe475e2298e02dec3d3ccb58007f2026cac4c76ed20387f0e4df75a6af74c2ced
+Contract Address: 0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9
+Block: 5
+Paid: 0.000279297840053988 ETH (467964 gas * 0.596836167 gwei)
+
+[32m⠂[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m⠂[0m Sequence #1 on anvil-hardhat | Total Paid: 0.000279297840053988 ETH (467964 gas * avg 0.596836167 gwei)
+
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m✅[0m Sequence #1 on anvil-hardhat | Total Paid: 0.000279297840053988 ETH (467964 gas * avg 0.596836167 gwei)
+
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m✅[0m Sequence #1 on anvil-hardhat | Total Paid: 0.000279297840053988 ETH (467964 gas * avg 0.596836167 gwei)
+
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m✅[0m Sequence #1 on anvil-hardhat | Total Paid: 0.000279297840053988 ETH (467964 gas * avg 0.596836167 gwei)
+                                                                                                                                                                                       
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: /home/egovridc/Desktop/contracts/testing/broadcast/DeployVoting.s.sol/31337/run-latest.json
+
+Sensitive values saved to: /home/egovridc/Desktop/contracts/testing/cache/DeployVoting.s.sol/31337/run-latest.json
+
+
+blockHash               0x83789b50b490e670113b2d76cb3536a553ef1c288ee777cf1eb6de2a7ff72f60
+blockNumber             6
+contractAddress         
+cumulativeGasUsed       71153
+effectiveGasPrice       524559129
+from                    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+gasUsed                 71153
+logs                    []
+logsBloom               0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+root                    0x4ca7904d9d9f6c45cba5a331e92681d647fb33e8bbaa7a6e8cee1d6b5bbf5d0e
+status                  1 (success)
+transactionHash         0xb2868517c57ea4721fe3f79b9de996d84e527949e00a3f133b436afca6784801
+transactionIndex        0
+type                    2
+blobGasPrice            1
+blobGasUsed             
+authorizationList       
+to                      0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ ./deploy.sh 
+./deploy.sh: line 4: export: `=0xcf7ed3acca5a467e9e704c703e8d87f634fb0fc9': not a valid identifier
+3[2K[1m[[32m⠃[0m][0m Compiling...3[2K[1m[[32m⠊[0m][0m Compiling...3[2K[1m[[32m⠒[0m][0m Compiling...
+No files changed, compilation skipped
+[33mEIP-3855 is not supported in one or more of the RPCs used.
+Unsupported Chain IDs: 31337.
+Contracts deployed with a Solidity version equal or higher than 0.8.20 might not work properly.
+For more information, please see https://eips.ethereum.org/EIPS/eip-3855[0m
+[32mScript ran successfully.[0m
+
+== Return ==
+0: contract Voting 0x0165878A594ca255338adfa4d48449f69242Eb8F
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 1.049118257 gwei
+
+Estimated total gas used for script: 608199
+
+Estimated amount required: 0.000638072674789143 ETH
+
+==========================
+[32m⠂[0m Sequence #1 on anvil-hardhat                                                                                                                                                         [2K[32m⠂[0m Sequence #1 on anvil-hardhat
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)[1A[2K[1B[2K[1A[32m⠂[0m Sequence #1 on anvil-hardhat | Sending transactions [0 - 0]
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)[1A[2K[1B[2K[1A[32m⠂[0m Sequence #1 on anvil-hardhat | Sending transactions [0 - 0]
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m⠂[0m Sequence #1 on anvil-hardhat | Sending transactions [0 - 0]
+    [32m⠂[0m [33m[Pending][0m 0x65b676f64bc5881d7fe54e15373bcf45c5967b8ece6ba21d2b30709dac4e203b
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m⠂[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠂[0m [33m[Pending][0m 0x65b676f64bc5881d7fe54e15373bcf45c5967b8ece6ba21d2b30709dac4e203b
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m⠂[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A
+##### anvil-hardhat
+✅  [Success]Hash: 0x65b676f64bc5881d7fe54e15373bcf45c5967b8ece6ba21d2b30709dac4e203b
+Contract Address: 0x0165878A594ca255338adfa4d48449f69242Eb8F
+Block: 7
+Paid: 0.000214935992018244 ETH (467964 gas * 0.459300271 gwei)
+
+[32m⠂[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m⠂[0m Sequence #1 on anvil-hardhat | Total Paid: 0.000214935992018244 ETH (467964 gas * avg 0.459300271 gwei)
+
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m✅[0m Sequence #1 on anvil-hardhat | Total Paid: 0.000214935992018244 ETH (467964 gas * avg 0.459300271 gwei)
+
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m✅[0m Sequence #1 on anvil-hardhat | Total Paid: 0.000214935992018244 ETH (467964 gas * avg 0.459300271 gwei)
+
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m✅[0m Sequence #1 on anvil-hardhat | Total Paid: 0.000214935992018244 ETH (467964 gas * avg 0.459300271 gwei)
+                                                                                                                                                                                       
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: /home/egovridc/Desktop/contracts/testing/broadcast/DeployVoting.s.sol/31337/run-latest.json
+
+Sensitive values saved to: /home/egovridc/Desktop/contracts/testing/cache/DeployVoting.s.sol/31337/run-latest.json
+
+
+blockHash               0xe5f74ab2c0fb64fd492b27c12f32d6bc6449d9db0a4a0312503cc3c9c07de227
+blockNumber             8
+contractAddress         
+cumulativeGasUsed       54053
+effectiveGasPrice       403678871
+from                    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+gasUsed                 54053
+logs                    []
+logsBloom               0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+root                    0xafa405ce6654818bbf706b2c667544d7ce846ed54a46b2f3d4a83e7ee8f8d61d
+status                  1 (success)
+transactionHash         0x97eda9d01aade333ddb0ffa91edd4c74a60a8618e6d1df3e327fd29d6949c6a3
+transactionIndex        0
+type                    2
+blobGasPrice            1
+blobGasUsed             
+authorizationList       
+to                      0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9
+
+blockHash               0xc3c499a0da19e68d812393ab59da730dc5013af77bea4c52f6163c66869c4188
+blockNumber             9
+contractAddress         
+cumulativeGasUsed       54053
+effectiveGasPrice       353400847
+from                    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+gasUsed                 54053
+logs                    []
+logsBloom               0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+root                    0xd835cd94b701e35d1fd77ccbcc2486b039b3701601a3e011f9ee643b99ff0a06
+status                  1 (success)
+transactionHash         0x0a541f4c6ef8a4a13f53761fc21465c763e0fe18facbf6960ef24b9c7e2ae1ce
+transactionIndex        0
+type                    2
+blobGasPrice            1
+blobGasUsed             
+authorizationList       
+to                      0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9
+
+blockHash               0xfd1afe6e823f4c9a872f33ec4547972e2afa7134eca146f32d16c0c721e20c7b
+blockNumber             10
+contractAddress         
+cumulativeGasUsed       54065
+effectiveGasPrice       309384928
+from                    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+gasUsed                 54065
+logs                    []
+logsBloom               0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+root                    0x4120cfb236c64f3b699ba99ba3971ce9e6b7d0eb176262cb2adf64416a5a7d70
+status                  1 (success)
+transactionHash         0x6e325a856226e34c8b971e9a0439ce883d6bc486afcc9a2f814ba5d0860092ad
+transactionIndex        0
+type                    2
+blobGasPrice            1
+blobGasUsed             
+authorizationList       
+to                      0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9
+
+blockHash               0x61246e7fb498304f5c280497e212f5dddcddb95aedc5bdffa0293ae405033244
+blockNumber             11
+contractAddress         
+cumulativeGasUsed       54053
+effectiveGasPrice       270851203
+from                    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+gasUsed                 54053
+logs                    []
+logsBloom               0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+root                    0xd4ebfa2302e0a4b47fc395827a4d02eaedb79e9fd60ffb98c7a1b405503fa931
+status                  1 (success)
+transactionHash         0xc428c52a0aec60006e4db402302df55fe8bb0f6bee2858e1fe402a92fb0d859b
+transactionIndex        0
+type                    2
+blobGasPrice            1
+blobGasUsed             
+authorizationList       
+to                      0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9
+
+blockHash               0xcecb580c7a4f8d6c0020597bc7cb265d860fa6a8fb4d47a9e61e266f99813d85
+blockNumber             12
+contractAddress         
+cumulativeGasUsed       54053
+effectiveGasPrice       237116806
+from                    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+gasUsed                 54053
+logs                    []
+logsBloom               0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+root                    0x66f5c9d141502b3fd7f83768a7490cb3fac27bbebbb0ee8df60a892d7d6e289a
+status                  1 (success)
+transactionHash         0x71929bf6b98c9245541d7c55740ab3fcf02a9dada3be2ea59184d9ff7fc2c933
+transactionIndex        0
+type                    2
+blobGasPrice            1
+blobGasUsed             
+authorizationList       
+to                      0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ forge r[Ktest --mt testResult 
+No tests match the provided pattern:
+	match-test: `testResult`
+
+Did you mean `testVote`?
+Error: 
+[31mNo tests to run[0m
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ forge test --mt testResult 
+Compiler run [31mfailed:[0m
+[1;31mError (9322)[0m[1;37m: No matching declaration found after argument-dependent lookup.[0m
+  [34m-->[0m test/VotingTest.t.sol:86:9:
+[34m   |[0m
+[34m86 |[0m         [33massertEq[0m(voting.getCandidate(2), voting.results());
+[34m   |[0m         [1;33m^^^^^^^^[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+  [34m-->[0m lib/forge-std/src/StdAssertions.sol:67:5:
+[34m   |[0m
+[34m67 |[0m     [33mfunction assertEq(bool left, bool right) internal pure virtual {[0m
+[34m   |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+  [34m-->[0m lib/forge-std/src/StdAssertions.sol:71:5:
+[34m   |[0m
+[34m71 |[0m     [33mfunction assertEq(bool left, bool right, string memory err) internal pure virtual {[0m
+[34m   |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+  [34m-->[0m lib/forge-std/src/StdAssertions.sol:75:5:
+[34m   |[0m
+[34m75 |[0m     [33mfunction assertEq(uint256 left, uint256 right) internal pure virtual {[0m
+[34m   |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+  [34m-->[0m lib/forge-std/src/StdAssertions.sol:79:5:
+[34m   |[0m
+[34m79 |[0m     [33mfunction assertEq(uint256 left, uint256 right, string memory err) internal pure virtual {[0m
+[34m   |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+  [34m-->[0m lib/forge-std/src/StdAssertions.sol:91:5:
+[34m   |[0m
+[34m91 |[0m     [33mfunction assertEq(int256 left, int256 right) internal pure virtual {[0m
+[34m   |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+  [34m-->[0m lib/forge-std/src/StdAssertions.sol:95:5:
+[34m   |[0m
+[34m95 |[0m     [33mfunction assertEq(int256 left, int256 right, string memory err) internal pure virtual {[0m
+[34m   |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+   [34m-->[0m lib/forge-std/src/StdAssertions.sol:107:5:
+[34m    |[0m
+[34m107 |[0m     [33mfunction assertEq(address left, address right) internal pure virtual {[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+   [34m-->[0m lib/forge-std/src/StdAssertions.sol:111:5:
+[34m    |[0m
+[34m111 |[0m     [33mfunction assertEq(address left, address right, string memory err) internal pure virtual {[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+   [34m-->[0m lib/forge-std/src/StdAssertions.sol:115:5:
+[34m    |[0m
+[34m115 |[0m     [33mfunction assertEq(bytes32 left, bytes32 right) internal pure virtual {[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+   [34m-->[0m lib/forge-std/src/StdAssertions.sol:119:5:
+[34m    |[0m
+[34m119 |[0m     [33mfunction assertEq(bytes32 left, bytes32 right, string memory err) internal pure virtual {[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+   [34m-->[0m lib/forge-std/src/StdAssertions.sol:131:5:
+[34m    |[0m
+[34m131 |[0m     [33mfunction assertEq(string memory left, string memory right) internal pure virtual {[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+   [34m-->[0m lib/forge-std/src/StdAssertions.sol:135:5:
+[34m    |[0m
+[34m135 |[0m     [33mfunction assertEq(string memory left, string memory right, string memory err) internal pure virtual {[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+   [34m-->[0m lib/forge-std/src/StdAssertions.sol:139:5:
+[34m    |[0m
+[34m139 |[0m     [33mfunction assertEq(bytes memory left, bytes memory right) internal pure virtual {[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+   [34m-->[0m lib/forge-std/src/StdAssertions.sol:143:5:
+[34m    |[0m
+[34m143 |[0m     [33mfunction assertEq(bytes memory left, bytes memory right, string memory err) internal pure virtual {[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+   [34m-->[0m lib/forge-std/src/StdAssertions.sol:147:5:
+[34m    |[0m
+[34m147 |[0m     [33mfunction assertEq(bool[] memory left, bool[] memory right) internal pure virtual {[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+   [34m-->[0m lib/forge-std/src/StdAssertions.sol:151:5:
+[34m    |[0m
+[34m151 |[0m     [33mfunction assertEq(bool[] memory left, bool[] memory right, string memory err) internal pure virtual {[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+   [34m-->[0m lib/forge-std/src/StdAssertions.sol:155:5:
+[34m    |[0m
+[34m155 |[0m     [33mfunction assertEq(uint256[] memory left, uint256[] memory right) internal pure virtual {[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+   [34m-->[0m lib/forge-std/src/StdAssertions.sol:159:5:
+[34m    |[0m
+[34m159 |[0m     [33mfunction assertEq(uint256[] memory left, uint256[] memory right, string memory err) internal pure virtual {[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+   [34m-->[0m lib/forge-std/src/StdAssertions.sol:163:5:
+[34m    |[0m
+[34m163 |[0m     [33mfunction assertEq(int256[] memory left, int256[] memory right) internal pure virtual {[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+   [34m-->[0m lib/forge-std/src/StdAssertions.sol:167:5:
+[34m    |[0m
+[34m167 |[0m     [33mfunction assertEq(int256[] memory left, int256[] memory right, string memory err) internal pure virtual {[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+   [34m-->[0m lib/forge-std/src/StdAssertions.sol:171:5:
+[34m    |[0m
+[34m171 |[0m     [33mfunction assertEq(address[] memory left, address[] memory right) internal pure virtual {[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+   [34m-->[0m lib/forge-std/src/StdAssertions.sol:175:5:
+[34m    |[0m
+[34m175 |[0m     [33mfunction assertEq(address[] memory left, address[] memory right, string memory err) internal pure virtual {[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+   [34m-->[0m lib/forge-std/src/StdAssertions.sol:179:5:
+[34m    |[0m
+[34m179 |[0m     [33mfunction assertEq(bytes32[] memory left, bytes32[] memory right) internal pure virtual {[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+   [34m-->[0m lib/forge-std/src/StdAssertions.sol:183:5:
+[34m    |[0m
+[34m183 |[0m     [33mfunction assertEq(bytes32[] memory left, bytes32[] memory right, string memory err) internal pure virtual {[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+   [34m-->[0m lib/forge-std/src/StdAssertions.sol:187:5:
+[34m    |[0m
+[34m187 |[0m     [33mfunction assertEq(string[] memory left, string[] memory right) internal pure virtual {[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+   [34m-->[0m lib/forge-std/src/StdAssertions.sol:191:5:
+[34m    |[0m
+[34m191 |[0m     [33mfunction assertEq(string[] memory left, string[] memory right, string memory err) internal pure virtual {[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+   [34m-->[0m lib/forge-std/src/StdAssertions.sol:195:5:
+[34m    |[0m
+[34m195 |[0m     [33mfunction assertEq(bytes[] memory left, bytes[] memory right) internal pure virtual {[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+[1;36mNote[0m[1;37m: Candidate:[0m
+   [34m-->[0m lib/forge-std/src/StdAssertions.sol:199:5:
+[34m    |[0m
+[34m199 |[0m     [33mfunction assertEq(bytes[] memory left, bytes[] memory right, string memory err) internal pure virtual {[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+
+Error: 
+[31mCompilation failed[0m
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ forge test --mt testResult 
+3[2K[1m[[32m⠃[0m][0m Compiling...3[2K[1m[[32m⠊[0m][0m Compiling...3[2K[1m[[32m⠒[0m][0m Compiling...
+3[2K[1m[[32m⠢[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠆[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠰[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠔[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠒[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠑[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠘[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠃[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠊[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠒[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠢[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠆[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠰[0m][0m Compiling 3 files with Solc 0.8.19
+3[2K[1m[[32m⠔[0m][0m Solc 0.8.19 finished in 1.23s
+Compiler run [32msuccessful![0m
+
+Ran 1 test for test/VotingTest.t.sol:VotingTest
+[31m[FAIL. Reason: EvmError: Revert][0m testResult() (gas: 59001)
+Suite result: [31mFAILED[0m. [32m0[0m passed; [31m1[0m failed; [33m0[0m skipped; finished in 1.17ms (108.35µs CPU time)
+
+Ran 1 test suite in 5.78ms (1.17ms CPU time): [32m0[0m tests passed, [31m1[0m failed, [33m0[0m skipped (1 total tests)
+
+Failing tests:
+Encountered 1 failing test in test/VotingTest.t.sol:VotingTest
+[31m[FAIL. Reason: EvmError: Revert][0m testResult() (gas: 59001)
+
+Encountered a total of [31m1[0m failing tests, [32m0[0m tests succeeded
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ forge test --mt testResult  [K-vvv
+3[2K[1m[[32m⠃[0m][0m Compiling...3[2K[1m[[32m⠊[0m][0m Compiling...3[2K[1m[[32m⠒[0m][0m Compiling...
+No files changed, compilation skipped
+
+Ran 1 test for test/VotingTest.t.sol:VotingTest
+[31m[FAIL. Reason: EvmError: Revert][0m testResult() (gas: 59001)
+Traces:
+  [59001] [31mVotingTest[0m::[31mtestResult[0m()
+    ├─ [0] [32mVM[0m::[32mprank[0m(DefaultSender: [0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38])
+    │   └─ [32m← [Return] [0m
+    ├─ [49645] [32mVoting[0m::[32maddCandidate[0m("hud")
+    │   └─ [32m← [Stop] [0m
+    ├─ [705] [31mVoting[0m::[31maddCandidate[0m("nuh")
+    │   └─ [31m← [Revert] [0mEvmError: Revert
+    └─ [31m← [Revert] [0mEvmError: Revert
+
+Suite result: [31mFAILED[0m. [32m0[0m passed; [31m1[0m failed; [33m0[0m skipped; finished in 1.02ms (116.08µs CPU time)
+
+Ran 1 test suite in 10.67ms (1.02ms CPU time): [32m0[0m tests passed, [31m1[0m failed, [33m0[0m skipped (1 total tests)
+
+Failing tests:
+Encountered 1 failing test in test/VotingTest.t.sol:VotingTest
+[31m[FAIL. Reason: EvmError: Revert][0m testResult() (gas: 59001)
+
+Encountered a total of [31m1[0m failing tests, [32m0[0m tests succeeded
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ forge test --mt testResult -vvv
+3[2K[1m[[32m⠃[0m][0m Compiling...3[2K[1m[[32m⠊[0m][0m Compiling...3[2K[1m[[32m⠒[0m][0m Compiling...
+3[2K[1m[[32m⠢[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠆[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠰[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠔[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠒[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠑[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠘[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠃[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠊[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠒[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠢[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠆[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠰[0m][0m Compiling 1 files with Solc 0.8.19
+3[2K[1m[[32m⠔[0m][0m Solc 0.8.19 finished in 1.25s
+Compiler run [32msuccessful![0m
+
+Ran 1 test for test/VotingTest.t.sol:VotingTest
+[31m[FAIL. Reason: EvmError: Revert][0m testResult() (gas: 59001)
+Traces:
+  [59001] [31mVotingTest[0m::[31mtestResult[0m()
+    ├─ [0] [32mVM[0m::[32mprank[0m(DefaultSender: [0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38])
+    │   └─ [32m← [Return] [0m
+    ├─ [49645] [32mVoting[0m::[32maddCandidate[0m("hud")
+    │   └─ [32m← [Stop] [0m
+    ├─ [705] [31mVoting[0m::[31maddCandidate[0m("nuh")
+    │   └─ [31m← [Revert] [0mEvmError: Revert
+    └─ [31m← [Revert] [0mEvmError: Revert
+
+Suite result: [31mFAILED[0m. [32m0[0m passed; [31m1[0m failed; [33m0[0m skipped; finished in 610.45µs (61.52µs CPU time)
+
+Ran 1 test suite in 4.23ms (610.45µs CPU time): [32m0[0m tests passed, [31m1[0m failed, [33m0[0m skipped (1 total tests)
+
+Failing tests:
+Encountered 1 failing test in test/VotingTest.t.sol:VotingTest
+[31m[FAIL. Reason: EvmError: Revert][0m testResult() (gas: 59001)
+
+Encountered a total of [31m1[0m failing tests, [32m0[0m tests succeeded
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ forge test --mt testResult -vvv
+3[2K[1m[[32m⠃[0m][0m Compiling...3[2K[1m[[32m⠊[0m][0m Compiling...3[2K[1m[[32m⠒[0m][0m Compiling...
+3[2K[1m[[32m⠢[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠆[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠰[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠔[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠒[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠑[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠘[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠃[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠊[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠒[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠢[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠆[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠰[0m][0m Compiling 1 files with Solc 0.8.19
+3[2K[1m[[32m⠔[0m][0m Solc 0.8.19 finished in 1.23s
+Compiler run [32msuccessful![0m
+
+Ran 1 test for test/VotingTest.t.sol:VotingTest
+[31m[FAIL. Reason: panic: array out-of-bounds access (0x32)][0m testResult() (gas: 2440402)
+Traces:
+  [2440402] [31mVotingTest[0m::[31mtestResult[0m()
+    ├─ [0] [32mVM[0m::[32mprank[0m(DefaultSender: [0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38])
+    │   └─ [32m← [Return] [0m
+    ├─ [49645] [32mVoting[0m::[32maddCandidate[0m("hud")
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(DefaultSender: [0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38])
+    │   └─ [32m← [Return] [0m
+    ├─ [25745] [32mVoting[0m::[32maddCandidate[0m("nuh")
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(DefaultSender: [0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38])
+    │   └─ [32m← [Return] [0m
+    ├─ [25745] [32mVoting[0m::[32maddCandidate[0m("pius")
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000000)
+    │   └─ [32m← [Return] [0m
+    ├─ [44059] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000000[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(ECRecover: [0x0000000000000000000000000000000000000001])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: ECRecover: [0x0000000000000000000000000000000000000001][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(SHA-256: [0x0000000000000000000000000000000000000002])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: SHA-256: [0x0000000000000000000000000000000000000002][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(RIPEMD-160: [0x0000000000000000000000000000000000000003])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: RIPEMD-160: [0x0000000000000000000000000000000000000003][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(Identity: [0x0000000000000000000000000000000000000004])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: Identity: [0x0000000000000000000000000000000000000004][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(ModExp: [0x0000000000000000000000000000000000000005])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: ModExp: [0x0000000000000000000000000000000000000005][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(ECAdd: [0x0000000000000000000000000000000000000006])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: ECAdd: [0x0000000000000000000000000000000000000006][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(ECMul: [0x0000000000000000000000000000000000000007])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: ECMul: [0x0000000000000000000000000000000000000007][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(ECPairing: [0x0000000000000000000000000000000000000008])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: ECPairing: [0x0000000000000000000000000000000000000008][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(Blake2F: [0x0000000000000000000000000000000000000009])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: Blake2F: [0x0000000000000000000000000000000000000009][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(PointEvaluation: [0x000000000000000000000000000000000000000A])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: PointEvaluation: [0x000000000000000000000000000000000000000A][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000000b)
+    │   └─ [32m← [Return] [0m
+    ├─ [44059] [32mVoting[0m::[32mvote[0m(1)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000000b[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000000C)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(1)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000000C[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000000d)
+    │   └─ [32m← [Return] [0m
+    ├─ [44059] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000000d[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000000E)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000000E[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000000F)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000000F[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000010)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000010[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000011)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000011[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000012)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000012[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000013)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000013[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000014)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000014[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000015)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000015[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000016)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000016[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000017)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000017[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000018)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000018[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000019)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000019[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000001a)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000001a[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000001B)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000001B[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000001c)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000001c[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000001D)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000001D[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000001e)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000001e[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000001F)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000001F[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000020)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000020[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000021)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000021[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000022)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000022[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000023)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000023[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000024)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000024[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000025)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000025[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000026)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000026[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000027)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000027[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000028)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000028[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000029)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000029[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000002A)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000002A[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000002b)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000002b[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000002c)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000002c[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000002D)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000002D[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000002E)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000002E[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000002F)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000002F[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000030)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000030[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000031)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000031[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000032)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000032[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000033)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000033[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000034)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000034[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000035)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000035[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000036)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000036[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000037)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000037[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000038)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000038[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000039)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000039[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000003a)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000003a[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000003b)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000003b[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000003c)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000003c[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000003D)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000003D[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000003e)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000003e[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000003f)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000003f[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000040)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000040[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000041)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000041[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000042)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000042[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000043)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000043[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000044)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000044[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000045)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000045[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000046)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000046[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000047)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000047[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000048)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000048[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000049)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000049[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000004A)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000004A[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000004B)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000004B[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000004C)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000004C[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000004D)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000004D[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000004e)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000004e[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000004f)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000004f[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000050)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000050[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000051)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000051[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000052)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000052[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000053)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000053[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000054)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000054[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000055)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000055[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000056)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000056[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000057)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000057[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000058)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000058[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000059)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000059[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [715] [31mVoting[0m::[31mresults[0m()[33m [staticcall][0m
+    │   └─ [31m← [Revert] [0mpanic: array out-of-bounds access (0x32)
+    └─ [31m← [Revert] [0mpanic: array out-of-bounds access (0x32)
+
+Suite result: [31mFAILED[0m. [32m0[0m passed; [31m1[0m failed; [33m0[0m skipped; finished in 1.62ms (1.07ms CPU time)
+
+Ran 1 test suite in 1.56s (1.62ms CPU time): [32m0[0m tests passed, [31m1[0m failed, [33m0[0m skipped (1 total tests)
+
+Failing tests:
+Encountered 1 failing test in test/VotingTest.t.sol:VotingTest
+[31m[FAIL. Reason: panic: array out-of-bounds access (0x32)][0m testResult() (gas: 2440402)
+
+Encountered a total of [31m1[0m failing tests, [32m0[0m tests succeeded
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ forge test --mt testResult -vvv
+3[2K[1m[[32m⠃[0m][0m Compiling...3[2K[1m[[32m⠊[0m][0m Compiling...3[2K[1m[[32m⠒[0m][0m Compiling...
+3[2K[1m[[32m⠢[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠆[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠰[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠔[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠒[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠑[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠘[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠃[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠊[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠒[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠢[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠆[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠰[0m][0m Compiling 1 files with Solc 0.8.19
+3[2K[1m[[32m⠔[0m][0m Solc 0.8.19 finished in 1.22s
+Compiler run [32msuccessful![0m
+
+Ran 1 test for test/VotingTest.t.sol:VotingTest
+[31m[FAIL. Reason: panic: array out-of-bounds access (0x32)][0m testResult() (gas: 676122)
+Traces:
+  [676122] [31mVotingTest[0m::[31mtestResult[0m()
+    ├─ [0] [32mVM[0m::[32mprank[0m(DefaultSender: [0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38])
+    │   └─ [32m← [Return] [0m
+    ├─ [49645] [32mVoting[0m::[32maddCandidate[0m("hud")
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(DefaultSender: [0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38])
+    │   └─ [32m← [Return] [0m
+    ├─ [25745] [32mVoting[0m::[32maddCandidate[0m("nuh")
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(DefaultSender: [0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38])
+    │   └─ [32m← [Return] [0m
+    ├─ [25745] [32mVoting[0m::[32maddCandidate[0m("pius")
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000000)
+    │   └─ [32m← [Return] [0m
+    ├─ [44059] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000000[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(ECRecover: [0x0000000000000000000000000000000000000001])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: ECRecover: [0x0000000000000000000000000000000000000001][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(SHA-256: [0x0000000000000000000000000000000000000002])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: SHA-256: [0x0000000000000000000000000000000000000002][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(RIPEMD-160: [0x0000000000000000000000000000000000000003])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: RIPEMD-160: [0x0000000000000000000000000000000000000003][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(Identity: [0x0000000000000000000000000000000000000004])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: Identity: [0x0000000000000000000000000000000000000004][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(ModExp: [0x0000000000000000000000000000000000000005])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: ModExp: [0x0000000000000000000000000000000000000005][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(ECAdd: [0x0000000000000000000000000000000000000006])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: ECAdd: [0x0000000000000000000000000000000000000006][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(ECMul: [0x0000000000000000000000000000000000000007])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: ECMul: [0x0000000000000000000000000000000000000007][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(ECPairing: [0x0000000000000000000000000000000000000008])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: ECPairing: [0x0000000000000000000000000000000000000008][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(Blake2F: [0x0000000000000000000000000000000000000009])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: Blake2F: [0x0000000000000000000000000000000000000009][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(PointEvaluation: [0x000000000000000000000000000000000000000A])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: PointEvaluation: [0x000000000000000000000000000000000000000A][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000000b)
+    │   └─ [32m← [Return] [0m
+    ├─ [44059] [32mVoting[0m::[32mvote[0m(1)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000000b[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000000C)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(1)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000000C[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000000d)
+    │   └─ [32m← [Return] [0m
+    ├─ [44059] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000000d[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000000E)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000000E[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000000F)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000000F[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000010)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000010[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000011)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000011[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000012)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000012[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000013)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000013[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [715] [31mVoting[0m::[31mresults[0m()[33m [staticcall][0m
+    │   └─ [31m← [Revert] [0mpanic: array out-of-bounds access (0x32)
+    └─ [31m← [Revert] [0mpanic: array out-of-bounds access (0x32)
+
+Suite result: [31mFAILED[0m. [32m0[0m passed; [31m1[0m failed; [33m0[0m skipped; finished in 828.67µs (280.27µs CPU time)
+
+Ran 1 test suite in 1.11s (828.67µs CPU time): [32m0[0m tests passed, [31m1[0m failed, [33m0[0m skipped (1 total tests)
+
+Failing tests:
+Encountered 1 failing test in test/VotingTest.t.sol:VotingTest
+[31m[FAIL. Reason: panic: array out-of-bounds access (0x32)][0m testResult() (gas: 676122)
+
+Encountered a total of [31m1[0m failing tests, [32m0[0m tests succeeded
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ [K]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ [K]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ s[Kcast send --n[Kunlocked --frm [K[Kom $ANVIL_ADDRESS 
+Error: 
+[31mMust specify a recipient address or contract code to deploy[0m
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ cast send --unlocked --from $ANVIL_ADDRESS 0x0165878a594ca255338adfa4d48449f69242eb8f "vote(uint)" 0
+Error: 
+[31mserver returned an error response: error code 3: execution reverted: panic: array out-of-bounds access (0x32)[0m
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ cast send --unlocked --from $ANVIL_ADDRESS 0x0165878a594ca255338adfa4d48449f69242eb8f "vote(uint)" 0[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[42@0xcf7ed3acca5a467e9e704c703e8d87f634fb0fc9
+
+blockHash               0x0f2958d16ed4c4e37b1a8d3f51b61dff2a5de2422df3c1fb2e7eef3db2fe3e7a
+blockNumber             13
+contractAddress         
+cumulativeGasUsed       69251
+effectiveGasPrice       207584013
+from                    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+gasUsed                 69251
+logs                    [{"address":"0xcf7ed3acca5a467e9e704c703e8d87f634fb0fc9","topics":["0x06bcdb53b32d499883ca70c1c93cbfe3f743f92415a86dcc2a98e0dbc4ac7391"],"data":"0x000000000000000000000000f39fd6e51aad88f6f4ce6ab8827279cfffb92266","blockHash":"0x0f2958d16ed4c4e37b1a8d3f51b61dff2a5de2422df3c1fb2e7eef3db2fe3e7a","blockNumber":"0xd","blockTimestamp":"0x66a1145b","transactionHash":"0x4655459802e6ddbd019022f8da1c0d33eddc7b6a64e58afc799594b68a9871f2","transactionIndex":"0x0","logIndex":"0x0","removed":false}]
+logsBloom               0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000040000000000000000000000000000000000000000000000000000000000
+root                    0x4cdeae16bbcf6961c6ce8c5166bb9904250efe9f02c395d8f0911174369dc35f
+status                  1 (success)
+transactionHash         0x4655459802e6ddbd019022f8da1c0d33eddc7b6a64e58afc799594b68a9871f2
+transactionIndex        0
+type                    2
+blobGasPrice            1
+blobGasUsed             
+authorizationList       
+to                      0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ cast call 0xcf7ed3acca5a467e9e704c703e8d87f634fb0fc9 "results()"
+Error: 
+[31mserver returned an error response: error code 3: execution reverted: panic: array out-of-bounds access (0x32)[0m
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ cast call 0xcf7ed3acca5a467e9e704c703e8d87f634fb0fc9 "results()" --[Kvvv
+[1m[31merror:[0m unexpected argument '[33m-v[0m' found
+
+  [32mtip:[0m to pass '[33m-v[0m' as a value, use '[32m-- -v[0m'
+
+[1m[4mUsage:[0m [1mcast call[0m [OPTIONS] [TO] [SIG] [ARGS]... [COMMAND]
+
+For more information, try '[1m--help[0m'.
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ cast call 0xcf7ed3acca5a467e9e704c703e8d87f634fb0fc9 "results()" -vvv[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K./deploy.sh 
+./deploy.sh: line 4: export: `=0xcf7ed3acca5a467e9e704c703e8d87f634fb0fc9': not a valid identifier
+3[2K[1m[[32m⠃[0m][0m Compiling...3[2K[1m[[32m⠊[0m][0m Compiling...3[2K[1m[[32m⠒[0m][0m Compiling...
+3[2K[1m[[32m⠢[0m][0m Compiling 2 files with Solc 0.8.193[2K[1m[[32m⠆[0m][0m Compiling 2 files with Solc 0.8.193[2K[1m[[32m⠰[0m][0m Compiling 2 files with Solc 0.8.193[2K[1m[[32m⠔[0m][0m Compiling 2 files with Solc 0.8.193[2K[1m[[32m⠒[0m][0m Compiling 2 files with Solc 0.8.193[2K[1m[[32m⠑[0m][0m Compiling 2 files with Solc 0.8.193[2K[1m[[32m⠘[0m][0m Compiling 2 files with Solc 0.8.193[2K[1m[[32m⠃[0m][0m Compiling 2 files with Solc 0.8.193[2K[1m[[32m⠊[0m][0m Compiling 2 files with Solc 0.8.193[2K[1m[[32m⠒[0m][0m Compiling 2 files with Solc 0.8.19
+3[2K[1m[[32m⠢[0m][0m Solc 0.8.19 finished in 911.20ms
+Compiler run [32msuccessful![0m
+[33mEIP-3855 is not supported in one or more of the RPCs used.
+Unsupported Chain IDs: 31337.
+Contracts deployed with a Solidity version equal or higher than 0.8.20 might not work properly.
+For more information, please see https://eips.ethereum.org/EIPS/eip-3855[0m
+[32mScript ran successfully.[0m
+
+== Return ==
+0: contract Voting 0x0DCd1Bf9A1b36cE34237eEaFef220932846BCD82
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 0.415168025 gwei
+
+Estimated total gas used for script: 659603
+
+Estimated amount required: 0.000273846074794075 ETH
+
+==========================
+[32m⠂[0m Sequence #1 on anvil-hardhat                                                                                                                                                         [2K[32m⠂[0m Sequence #1 on anvil-hardhat
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[1A[2K[1B[2K[1A[32m⠂[0m Sequence #1 on anvil-hardhat | Sending transactions [0 - 0]
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[1A[2K[1B[2K[1A[32m⠂[0m Sequence #1 on anvil-hardhat | Sending transactions [0 - 0]
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m⠂[0m Sequence #1 on anvil-hardhat | Sending transactions [0 - 0]
+    [32m⠂[0m [33m[Pending][0m 0x517aa3f5a2980271505bcecb145bf544dc8e66e9bbfc763d38f35cc593846010
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m⠂[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠂[0m [33m[Pending][0m 0x517aa3f5a2980271505bcecb145bf544dc8e66e9bbfc763d38f35cc593846010
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m⠂[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A
+##### anvil-hardhat
+✅  [Success]Hash: 0x517aa3f5a2980271505bcecb145bf544dc8e66e9bbfc763d38f35cc593846010
+Contract Address: 0x0DCd1Bf9A1b36cE34237eEaFef220932846BCD82
+Block: 14
+Paid: 0.000092244161901219 ETH (507517 gas * 0.181755807 gwei)
+
+[32m⠂[0m Sequence #1 on anvil-hardhat | Waiting for pending transactions
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m⠂[0m Sequence #1 on anvil-hardhat | Total Paid: 0.000092244161901219 ETH (507517 gas * avg 0.181755807 gwei)
+
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m✅[0m Sequence #1 on anvil-hardhat | Total Paid: 0.000092244161901219 ETH (507517 gas * avg 0.181755807 gwei)
+
+    [32m⠁[0m [00:00:00] [[36m[34m----------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 txes (0.0s)
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[3A[2K[1B[2K[1B[2K[1B[2K[3A[32m✅[0m Sequence #1 on anvil-hardhat | Total Paid: 0.000092244161901219 ETH (507517 gas * avg 0.181755807 gwei)
+
+    [32m⠁[0m [00:00:00] [[36m[34m------------------------------------------------------------------------------------------------------------------------------------------------[0m[0m] 0/1 receipts (0.0s)[2A[2K[1B[2K[1B[2K[2A[32m✅[0m Sequence #1 on anvil-hardhat | Total Paid: 0.000092244161901219 ETH (507517 gas * avg 0.181755807 gwei)
+                                                                                                                                                                                       
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: /home/egovridc/Desktop/contracts/testing/broadcast/DeployVoting.s.sol/31337/run-latest.json
+
+Sensitive values saved to: /home/egovridc/Desktop/contracts/testing/cache/DeployVoting.s.sol/31337/run-latest.json
+
+
+blockHash               0x31e374f1d9e0673e3263a0d97d0d1697c6af71dc18f029e33d4b48c8d1033b29
+blockNumber             15
+contractAddress         
+cumulativeGasUsed       54053
+effectiveGasPrice       159805033
+from                    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+gasUsed                 54053
+logs                    []
+logsBloom               0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+root                    0x25ff45476bc06f391cac54138fe9228bd30de092112df9b8d5a0edc69862633c
+status                  1 (success)
+transactionHash         0x9fa5fc10678a24086800cb8fd8074bc6a9223a55a23e4d2727a001e46ab55b62
+transactionIndex        0
+type                    2
+blobGasPrice            1
+blobGasUsed             
+authorizationList       
+to                      0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9
+
+blockHash               0xef1db127b5f108a101431835c27b66de3a65d72343604109b8a630bdd3e927b3
+blockNumber             16
+contractAddress         
+cumulativeGasUsed       54053
+effectiveGasPrice       139901387
+from                    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+gasUsed                 54053
+logs                    []
+logsBloom               0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+root                    0x59b44a4703e0ed09a8be6e151d38bd6fcceb659f17461ff77657425c9a169cbb
+status                  1 (success)
+transactionHash         0x42dfe5fcbbdc82cadb243f0f00ef301e4738e0c367d3338d8bcbb7c71d6fa0d1
+transactionIndex        0
+type                    2
+blobGasPrice            1
+blobGasUsed             
+authorizationList       
+to                      0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9
+
+blockHash               0x678ff2ab2f39f7f33527c670ab06d26cb25d01db58502d12c6ec43b167c61587
+blockNumber             17
+contractAddress         
+cumulativeGasUsed       54065
+effectiveGasPrice       122476732
+from                    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+gasUsed                 54065
+logs                    []
+logsBloom               0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+root                    0xa211ff3a1c0af4448b97b25e9e9cfcf6572c1ccf5c84abcb7718142ccb317fa9
+status                  1 (success)
+transactionHash         0x1be9b8b054c0c0bb609f390eccd7f8098e3439f22ddf8545c46095bf15ce12d2
+transactionIndex        0
+type                    2
+blobGasPrice            1
+blobGasUsed             
+authorizationList       
+to                      0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9
+
+blockHash               0xeb7ab48eaa24d2f85307e0a4fbefb45ff835945821fb5e55273d83094dc061ed
+blockNumber             18
+contractAddress         
+cumulativeGasUsed       54053
+effectiveGasPrice       107222322
+from                    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+gasUsed                 54053
+logs                    []
+logsBloom               0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+root                    0x77802f3f192d2945b00c6f5762f4d04d6c1be5ca772ec01910ef4212a3a09837
+status                  1 (success)
+transactionHash         0x01b8c876db4442faa813f6f3111cd5cf72aaa976bb48995f1f06ef44017a02a0
+transactionIndex        0
+type                    2
+blobGasPrice            1
+blobGasUsed             
+authorizationList       
+to                      0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9
+
+blockHash               0x4b6d3d993bf9881f6e2d810d9c3037a165f81015d06bc257f9d4c3de877816c3
+blockNumber             19
+contractAddress         
+cumulativeGasUsed       54053
+effectiveGasPrice       93867830
+from                    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+gasUsed                 54053
+logs                    []
+logsBloom               0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+root                    0x15aad34fa1b9c8fcabbd551b4ffb126dd96d3de1fe2ee29f7b5c827b522b2e4a
+status                  1 (success)
+transactionHash         0xe4024b6af820473215c5218330adea15905d0f23861a327e9c4b3ec5590e0b6c
+transactionIndex        0
+type                    2
+blobGasPrice            1
+blobGasUsed             
+authorizationList       
+to                      0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ ./deploy.sh cast call 0xcf7ed3acca5a467e9e704c703e8d87f634fb0fc9 "results()" -vvv[K -vvv[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./deploy.sh [K[K./deploy.sh cast call 0xcf7ed3acca5a467e9e704c703e8d87f634fb0fc9 "results()" -vvv[Ksend --unlocked --from $ANVIL_ADDRESS 0xcf7ed3acca5a467e9e704c703e8d87f634fb0fc9 "vote(uint)" 00165878a594ca255338adfa4d48449f69242eb8f[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[12Pforge test --mt testResult -vvv[K-vvv
+3[2K[1m[[32m⠃[0m][0m Compiling...3[2K[1m[[32m⠊[0m][0m Compiling...3[2K[1m[[32m⠒[0m][0m Compiling...
+3[2K[1m[[32m⠢[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠆[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠰[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠔[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠒[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠑[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠘[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠃[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠊[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠒[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠢[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠆[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠰[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠔[0m][0m Compiling 3 files with Solc 0.8.19
+3[2K[1m[[32m⠒[0m][0m Solc 0.8.19 finished in 1.25s
+Compiler run [32msuccessful![0m
+
+Ran 1 test for test/VotingTest.t.sol:VotingTest
+[31m[FAIL. Reason: assertion failed: 2 != 0][0m testResult() (gas: 683862)
+Logs:
+  ok
+
+Traces:
+  [683862] [31mVotingTest[0m::[31mtestResult[0m()
+    ├─ [0] [32mVM[0m::[32mprank[0m(DefaultSender: [0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38])
+    │   └─ [32m← [Return] [0m
+    ├─ [49645] [32mVoting[0m::[32maddCandidate[0m("hud")
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(DefaultSender: [0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38])
+    │   └─ [32m← [Return] [0m
+    ├─ [25745] [32mVoting[0m::[32maddCandidate[0m("nuh")
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(DefaultSender: [0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38])
+    │   └─ [32m← [Return] [0m
+    ├─ [25745] [32mVoting[0m::[32maddCandidate[0m("pius")
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000000)
+    │   └─ [32m← [Return] [0m
+    ├─ [44059] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000000[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(ECRecover: [0x0000000000000000000000000000000000000001])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: ECRecover: [0x0000000000000000000000000000000000000001][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(SHA-256: [0x0000000000000000000000000000000000000002])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: SHA-256: [0x0000000000000000000000000000000000000002][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(RIPEMD-160: [0x0000000000000000000000000000000000000003])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: RIPEMD-160: [0x0000000000000000000000000000000000000003][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(Identity: [0x0000000000000000000000000000000000000004])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: Identity: [0x0000000000000000000000000000000000000004][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(ModExp: [0x0000000000000000000000000000000000000005])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: ModExp: [0x0000000000000000000000000000000000000005][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(ECAdd: [0x0000000000000000000000000000000000000006])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: ECAdd: [0x0000000000000000000000000000000000000006][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(ECMul: [0x0000000000000000000000000000000000000007])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: ECMul: [0x0000000000000000000000000000000000000007][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(ECPairing: [0x0000000000000000000000000000000000000008])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: ECPairing: [0x0000000000000000000000000000000000000008][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(Blake2F: [0x0000000000000000000000000000000000000009])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: Blake2F: [0x0000000000000000000000000000000000000009][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(PointEvaluation: [0x000000000000000000000000000000000000000A])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: PointEvaluation: [0x000000000000000000000000000000000000000A][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000000b)
+    │   └─ [32m← [Return] [0m
+    ├─ [44059] [32mVoting[0m::[32mvote[0m(1)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000000b[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000000C)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(1)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000000C[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000000d)
+    │   └─ [32m← [Return] [0m
+    ├─ [44059] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000000d[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000000E)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000000E[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000000F)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000000F[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000010)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000010[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000011)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000011[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000012)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000012[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000013)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000013[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [7902] [32mVoting[0m::[32mresults[0m()[33m [staticcall][0m
+    │   ├─ [0] [32mconsole[0m::[32mlog[0m("ok")[33m [staticcall][0m
+    │   │   └─ [32m← [Stop] [0m
+    │   └─ [32m← [Return] [0m0
+    ├─ [0] [31mVM[0m::[31massertEq[0m(2, 0)[33m [staticcall][0m
+    │   └─ [31m← [Revert] [0massertion failed: 2 != 0
+    └─ [31m← [Revert] [0massertion failed: 2 != 0
+
+Suite result: [31mFAILED[0m. [32m0[0m passed; [31m1[0m failed; [33m0[0m skipped; finished in 25.24ms (24.65ms CPU time)
+
+Ran 1 test suite in 3.12s (25.24ms CPU time): [32m0[0m tests passed, [31m1[0m failed, [33m0[0m skipped (1 total tests)
+
+Failing tests:
+Encountered 1 failing test in test/VotingTest.t.sol:VotingTest
+[31m[FAIL. Reason: assertion failed: 2 != 0][0m testResult() (gas: 683862)
+
+Encountered a total of [31m1[0m failing tests, [32m0[0m tests succeeded
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ forge test --mt testResult -vvv
+3[2K[1m[[32m⠃[0m][0m Compiling...3[2K[1m[[32m⠊[0m][0m Compiling...3[2K[1m[[32m⠒[0m][0m Compiling...
+3[2K[1m[[32m⠢[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠆[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠰[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠔[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠒[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠑[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠘[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠃[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠊[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠒[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠢[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠆[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠰[0m][0m Compiling 1 files with Solc 0.8.19
+3[2K[1m[[32m⠔[0m][0m Solc 0.8.19 finished in 1.25s
+Compiler run [32msuccessful![0m
+
+Ran 1 test for test/VotingTest.t.sol:VotingTest
+[32m[PASS][0m testResult() (gas: 683865)
+Logs:
+  ok
+
+Suite result: [32mok[0m. [32m1[0m passed; [31m0[0m failed; [33m0[0m skipped; finished in 895.29µs (319.35µs CPU time)
+
+Ran 1 test suite in 4.43ms (895.29µs CPU time): [32m1[0m tests passed, [31m0[0m failed, [33m0[0m skipped (1 total tests)
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ forge test --mt testResult -vvv
+3[2K[1m[[32m⠃[0m][0m Compiling...3[2K[1m[[32m⠊[0m][0m Compiling...3[2K[1m[[32m⠒[0m][0m Compiling...
+3[2K[1m[[32m⠢[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠆[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠰[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠔[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠒[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠑[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠘[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠃[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠊[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠒[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠢[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠆[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠰[0m][0m Compiling 1 files with Solc 0.8.19
+3[2K[1m[[32m⠔[0m][0m Solc 0.8.19 finished in 1.24s
+Compiler run [32msuccessful![0m
+
+Ran 1 test for test/VotingTest.t.sol:VotingTest
+[31m[FAIL. Reason: assertion failed: 0 != 2][0m testResult() (gas: 935967)
+Logs:
+  ok
+
+Traces:
+  [935967] [31mVotingTest[0m::[31mtestResult[0m()
+    ├─ [0] [32mVM[0m::[32mprank[0m(DefaultSender: [0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38])
+    │   └─ [32m← [Return] [0m
+    ├─ [49645] [32mVoting[0m::[32maddCandidate[0m("hud")
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(DefaultSender: [0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38])
+    │   └─ [32m← [Return] [0m
+    ├─ [25745] [32mVoting[0m::[32maddCandidate[0m("nuh")
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(DefaultSender: [0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38])
+    │   └─ [32m← [Return] [0m
+    ├─ [25745] [32mVoting[0m::[32maddCandidate[0m("pius")
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000000)
+    │   └─ [32m← [Return] [0m
+    ├─ [44059] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000000[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(ECRecover: [0x0000000000000000000000000000000000000001])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: ECRecover: [0x0000000000000000000000000000000000000001][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(SHA-256: [0x0000000000000000000000000000000000000002])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: SHA-256: [0x0000000000000000000000000000000000000002][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(RIPEMD-160: [0x0000000000000000000000000000000000000003])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: RIPEMD-160: [0x0000000000000000000000000000000000000003][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(Identity: [0x0000000000000000000000000000000000000004])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: Identity: [0x0000000000000000000000000000000000000004][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(ModExp: [0x0000000000000000000000000000000000000005])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: ModExp: [0x0000000000000000000000000000000000000005][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(ECAdd: [0x0000000000000000000000000000000000000006])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: ECAdd: [0x0000000000000000000000000000000000000006][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(ECMul: [0x0000000000000000000000000000000000000007])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: ECMul: [0x0000000000000000000000000000000000000007][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(ECPairing: [0x0000000000000000000000000000000000000008])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: ECPairing: [0x0000000000000000000000000000000000000008][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(Blake2F: [0x0000000000000000000000000000000000000009])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: Blake2F: [0x0000000000000000000000000000000000000009][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(PointEvaluation: [0x000000000000000000000000000000000000000A])
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(0)
+    │   ├─ emit VotedSuccessful([36mvoter: PointEvaluation: [0x000000000000000000000000000000000000000A][0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000000b)
+    │   └─ [32m← [Return] [0m
+    ├─ [44059] [32mVoting[0m::[32mvote[0m(1)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000000b[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000000C)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(1)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000000C[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000000d)
+    │   └─ [32m← [Return] [0m
+    ├─ [44059] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000000d[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000000E)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000000E[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000000F)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000000F[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000010)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000010[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000011)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000011[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000012)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000012[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000013)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000013[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000014)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000014[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000015)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000015[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000016)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000016[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000017)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000017[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000018)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000018[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x0000000000000000000000000000000000000019)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x0000000000000000000000000000000000000019[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000001a)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000001a[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000001B)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000001B[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000001c)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000001c[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [0] [32mVM[0m::[32mprank[0m(0x000000000000000000000000000000000000001D)
+    │   └─ [32m← [Return] [0m
+    ├─ [24159] [32mVoting[0m::[32mvote[0m(2)
+    │   ├─ emit VotedSuccessful([36mvoter: 0x000000000000000000000000000000000000001D[0m)
+    │   └─ [32m← [Stop] [0m
+    ├─ [7967] [32mVoting[0m::[32mresults[0m()[33m [staticcall][0m
+    │   ├─ [0] [32mconsole[0m::[32mlog[0m("ok")[33m [staticcall][0m
+    │   │   └─ [32m← [Stop] [0m
+    │   └─ [32m← [Return] [0m2
+    ├─ [0] [31mVM[0m::[31massertEq[0m(0, 2)[33m [staticcall][0m
+    │   └─ [31m← [Revert] [0massertion failed: 0 != 2
+    └─ [31m← [Revert] [0massertion failed: 0 != 2
+
+Suite result: [31mFAILED[0m. [32m0[0m passed; [31m1[0m failed; [33m0[0m skipped; finished in 990.31µs (434.43µs CPU time)
+
+Ran 1 test suite in 1.12s (990.31µs CPU time): [32m0[0m tests passed, [31m1[0m failed, [33m0[0m skipped (1 total tests)
+
+Failing tests:
+Encountered 1 failing test in test/VotingTest.t.sol:VotingTest
+[31m[FAIL. Reason: assertion failed: 0 != 2][0m testResult() (gas: 935967)
+
+Encountered a total of [31m1[0m failing tests, [32m0[0m tests succeeded
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ forge test --mt testResult -vvv
+3[2K[1m[[32m⠃[0m][0m Compiling...3[2K[1m[[32m⠊[0m][0m Compiling...3[2K[1m[[32m⠒[0m][0m Compiling...
+3[2K[1m[[32m⠢[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠆[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠰[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠔[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠒[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠑[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠘[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠃[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠊[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠒[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠢[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠆[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠰[0m][0m Compiling 1 files with Solc 0.8.193[2K[1m[[32m⠔[0m][0m Compiling 1 files with Solc 0.8.19
+3[2K[1m[[32m⠒[0m][0m Solc 0.8.19 finished in 1.26s
+Compiler run [32msuccessful![0m
+
+Ran 1 test for test/VotingTest.t.sol:VotingTest
+[32m[PASS][0m testResult() (gas: 935970)
+Logs:
+  ok
+
+Suite result: [32mok[0m. [32m1[0m passed; [31m0[0m failed; [33m0[0m skipped; finished in 3.26ms (1.48ms CPU time)
+
+Ran 1 test suite in 12.56ms (3.26ms CPU time): [32m1[0m tests passed, [31m0[0m failed, [33m0[0m skipped (1 total tests)
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ forge test --mt testResult -vvv
+3[2K[1m[[32m⠃[0m][0m Compiling...3[2K[1m[[32m⠊[0m][0m Compiling...3[2K[1m[[32m⠒[0m][0m Compiling...
+3[2K[1m[[32m⠢[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠆[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠰[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠔[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠒[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠑[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠘[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠃[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠊[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠒[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠢[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠆[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠰[0m][0m Compiling 3 files with Solc 0.8.193[2K[1m[[32m⠔[0m][0m Compiling 3 files with Solc 0.8.19
+3[2K[1m[[32m⠒[0m][0m Solc 0.8.19 finished in 1.27s
+Compiler run [32msuccessful![0m
+
+Ran 1 test for test/VotingTest.t.sol:VotingTest
+[32m[PASS][0m testResult() (gas: 953485)
+Logs:
+  ok
+  ok
+
+Suite result: [32mok[0m. [32m1[0m passed; [31m0[0m failed; [33m0[0m skipped; finished in 4.36ms (2.21ms CPU time)
+
+Ran 1 test suite in 11.09ms (4.36ms CPU time): [32m1[0m tests passed, [31m0[0m failed, [33m0[0m skipped (1 total tests)
+]0;egovridc@egovridc-Vostro-3670: ~/Desktop/contracts/testing[01;32megovridc@egovridc-Vostro-3670[00m:[01;34m~/Desktop/contracts/testing[00m$ exit
+
+Script done on 2024-07-24 20:43:00+03:00 [COMMAND_EXIT_CODE="0"]
